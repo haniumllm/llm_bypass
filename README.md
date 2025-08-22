@@ -1,28 +1,21 @@
-# llm_bypass
+# llm_bypass_similarity
 
 ## 절차
 
 ### 의존성 설치
 
 ```bash
-pip install openai python-dotenv
+pip install fastapi uvicorn requests xmltodict openai python-dotenv numpy
 ```
 
-### 폴더 경로 이동
-
-```bash
-cd patent
-```
-
-.env에 gpt api key, 자신 local database 정보 삽입
-(database에는 id(auto-increament), patent_number, title, summary 필드가 존재해야 함 | 해당 data는 일단 dummy data 삽입)
+.env에 OPENAI_API_KEY, KIPRIS_API_KEY 삽입
 
 ### 실행
 
 ```bash
-python test3.py
+python integrated_patent_api.py
 ```
 
 ## 출력
 
-![alt text](image.png)
+![alt text](request_response.png)
